@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -e
+## Complaints to: 'Marco Antonio Gonzalez Junior <marco@intergalactic.ai>'
 
 # Remove all Docker images and containers
 # WARNING: Cannot be undone
