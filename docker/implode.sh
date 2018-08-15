@@ -1,8 +1,4 @@
-#!/usr/bin/env bash -e
-## Complaints to: 'Marco Antonio Gonzalez Junior <marco@intergalactic.ai>'
-
-# Remove all Docker images and containers
-# WARNING: Cannot be undone
+#!/bin/bash
 
 function rm_all {
 	docker stop $(docker ps -a -q)
@@ -15,9 +11,9 @@ function do_nothing() {
 	exit 0
 }
 
-read -r -p "Are you sure? [yes/N]: " response
+read -r -p "Remove ALL Docker images and containers. Are you sure? [yes/N]: " response
 case "$response" in
-    [yY][eE][sS]|[yY])
+    [yY][eE][sS])
         rm_all
         ;;
     *)
