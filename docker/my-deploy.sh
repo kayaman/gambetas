@@ -1,9 +1,8 @@
 #!/bin/bash
 
-HOST=18.228.91.207
-KEY=wdotnet
-# HOST=dock.yourcompany.com
-# KEY=yourcompany
+HOST=yoursubdomain.yourcompany.com
+KEY=<yourco<company>
+IMAGE_NAME=<your_docker_image_name>
 
 ssh -i ~/.ssh/${KEY}.pem ubuntu@${HOST} <<'ENDSSH'
   set +e

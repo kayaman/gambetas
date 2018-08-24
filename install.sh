@@ -12,7 +12,8 @@ if [ -n "$ZSH_VERSION" ]; then
 elif [ -n "$BASH_VERSION" ]; then
    SHELLRC=".bashrc"
 else
-   echo "I do not support your shell, pu"
+   echo "No support your shell..."
+   exit 0
 fi
 
 # TODO: install the functions
