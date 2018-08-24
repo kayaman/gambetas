@@ -1,6 +1,6 @@
-#!/usr/bin/env bash -e
+#!/bin/bash
 
-# SSL certificate setup: from Comodo to AWS ACM
+# SSL certificate setup: from COMODO to AWS ACM
 
 ## Amazon AWS need your issued certificatey, your private key and thhe chain
 ## certificate bundle that include all intermediate and Root CA certificate.
@@ -19,7 +19,7 @@ echo "Converting all certificates..."
 openssl x509 -in ./AddTrustExternalCARoot.crt -outform pem -out ./pem/AddTrustExternalCARoot.pem
 openssl x509 -in ./COMODORSAAddTrustCA.crt -outform pem -out ./pem/COMODORSAAddTrustCA.pem
 openssl x509 -in ./COMODORSADomainValidationSecureServerCA.crt -outform pem -out ./pem/COMODORSADomainValidationSecureServerCA.pem
-openssl x509 -in ./$NAME.crt -outform pem -out ./pem/fabots_com.pem
+openssl x509 -in ./$NAME.crt -outform pem -out ./pem/$NAME.pem
 
 echo "Converting the private key..."
 
