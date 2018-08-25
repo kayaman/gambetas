@@ -3,8 +3,8 @@
 cd $HOME
 rm -rf ~/gambetas ~/.gambetas
 git clone git@github.com:kayaman/gambetas.git
-
 mv ~/gambetas ~/.gambetas
+mv ~/.gambetas/.gambetasrc ~/
 
 if [ -d "$HOME/bin" ]; then
   mkdir bin
@@ -19,10 +19,11 @@ else
    exit 0
 fi
 
-for i in ~/.gambetas/cheats/*; do
-  echo "Installing $(basename $i)..."
-  source ~/.gambetas/cheats/$(basename $i)
-done
+if [ ! [-f "$HOME/.my-gambetas.sh" ] ]; then
+  mv ~/.gambetas/my-gambetas.sample.sh mv ~/.my-gambetas.sh
+fi
 
+echo "source ~/.gambetasrc" >> $HOME/$SHELLRC
+echo "source ~/.my-gambetas.sh" >> $HOME/$SHELLRC
 echo "export PATH=$PATH:$HOME/bin" >> $HOME/$SHELLRC
 source $HOME/$SHELLRC

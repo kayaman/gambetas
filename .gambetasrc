@@ -1,0 +1,4 @@
+
+for i in ~/.gambetas/cheats/*; do
+  source ~/.gambetas/cheats/$(basename $i)
+done
