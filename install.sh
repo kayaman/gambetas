@@ -1,10 +1,10 @@
 #!/bin/bash
 
 cd $HOME
-rm -rf gambetas .gambetas
+rm -rf ~/gambetas ~/.gambetas
 git clone git@github.com:kayaman/gambetas.git
 
-mv gambetas .gambetas
+mv ~/gambetas ~/.gambetas
 
 if [ -d "$HOME/bin" ]; then
   mkdir bin
