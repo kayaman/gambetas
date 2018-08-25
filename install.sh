@@ -21,7 +21,7 @@ fi
 
 for i in ~/.gambetas/cheats/*; do
   echo "Installing $(basename $i)..."
-  source ~/$(basename $i)
+  source ~/.gambetas/$(basename $i)
 done
 
 echo "export PATH=$PATH:$HOME/bin" >> $HOME/$SHELLRC
