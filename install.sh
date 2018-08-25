@@ -5,7 +5,8 @@ rm -rf ~/gambetas ~/.gambetas
 git clone git@github.com:kayaman/gambetas.git
 mv ~/gambetas ~/.gambetas
 
-if [ -d "$HOME/bin" ]; then
+if [[ ! -d "$HOME/bin" ]]
+then
   mkdir bin
 fi
 
@@ -18,7 +19,7 @@ else
    exit 0
 fi
 
-if [ ! -f ~/.my-gambetas.sh ]
+if [[ ! -f ~/.my-gambetas.sh ]]
 then
   mv ~/.gambetas/my-gambetas.sample.sh ~/.my-gambetas.sh
 fi
