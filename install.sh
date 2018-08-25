@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $HOME
-rm -rf gambetas
+rm -rf gambetas .gambetas
 git clone git@github.com:kayaman/gambetas.git
 
 mv gambetas .gambetas
