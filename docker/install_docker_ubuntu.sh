@@ -23,6 +23,9 @@ sudo add-apt-repository \
      stable"
 sudo apt-get update
 
+pip install --upgrade pip
+
+
 # Install current version
 sudo apt-get install -y docker-ce
 

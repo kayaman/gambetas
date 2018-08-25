@@ -1,7 +1,10 @@
 #!/bin/bash
 
 cd $HOME
+rm -rf gambetas
 git clone git@github.com:kayaman/gambetas.git
+
+mv gambetas .gambetas
 
 if [ -d "$HOME/bin" ]; then
   mkdir bin
@@ -16,14 +19,10 @@ else
    exit 0
 fi
 
-# TODO: install the functions
-
-# for i in ~/.dotfiles/dotfiles/*; do
-#   echo "Installing $(basename $i)..."
-#   rm -rf ~/.$(basename $i)
-#   ln -s $i ~/.$(basename $i)
-# done
-
+for i in ~/.gambetas/cheats/*; do
+  echo "Installing $(basename $i)..."
+  source ~/.$(basename $i)
+done
 
 echo "export PATH=$PATH:$HOME/bin" >> $HOME/$SHELLRC
 source $HOME/$SHELLRC
