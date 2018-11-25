@@ -11,6 +11,15 @@ ORG_UNIT='IT'
 EMAIL='you@yourcompany.com'
 #################################################################
 
+####
+## useful snipper if somethin went wrong in the middle of script execution
+# sudo killall apt-get
+# sudo rm /var/lib/apt/lists/lock
+# sudo rm /var/cache/apt/archives/lock
+# sudo rm /var/lib/dpkg/lock
+# sudo dpkg --configure -a
+####
+
 set -e
 set -x
 
